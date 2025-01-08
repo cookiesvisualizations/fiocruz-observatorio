@@ -1,0 +1,24 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    margin: 20px 0;
+}
+
+h1, h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
