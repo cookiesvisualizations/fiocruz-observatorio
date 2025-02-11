@@ -65,7 +65,7 @@ a:visited {
 }
 
 .text h1 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: var(--color-black);
     padding-left: 10%;
@@ -105,8 +105,8 @@ img.logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("/img/gif_teste.gif");
-    background-position: center center;
+    background-image: url("/img/cover.gif");
+    background-position: center;
     background-size: cover;
 }
 
@@ -188,7 +188,7 @@ img.logo.small {
 
 .story-link-container h1 {
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 0px;
 }
 
@@ -196,7 +196,7 @@ img.logo.small {
 .story-link-container p {
     color: var(--color-black);
     padding-left: 0px;
-    padding-right: 10%;
+    padding-right: 0px;
 }
 
 .story-link-container span.rounded-borders {
@@ -283,7 +283,7 @@ img.logo.small {
 }
 
 .block-container.research h2 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -309,16 +309,19 @@ img.logo.small {
 .pesquisadores .pesquisador {
     flex: 1 1 calc(33.333% - 20px); /* Por padrão, em 3 colunas */
     margin: 10px;
+    margin-top: 40px;
     text-align: center;
 }
 
 .pesquisadores .pesquisador-foto {
-    width: 50%;
-    height: auto;
+    width: 150px; /* Define um tamanho fixo para todas as imagens */
+    height: 150px; /* Mantém a altura uniforme */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 50%; /* Opcional: arredonda a imagem para um visual mais elegante */
 }
 
 .pesquisadores h1 {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -326,9 +329,13 @@ img.logo.small {
 }
 
 .pesquisadores p {
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.pesquisadores a.text-elements:hover {
+    opacity: 0.5;
 }
 
 /* Responsividade para telas menores */
@@ -338,7 +345,9 @@ img.logo.small {
     }
 
     .pesquisadores .pesquisador-foto {
-        width: 70%; /* Ajusta o tamanho da imagem para melhor visualização */
+        width: 120px; /* Ajusta o tamanho da imagem */
+        height: 120px;
     }
 }
+
 
