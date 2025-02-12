@@ -161,10 +161,6 @@ img.logo.small {
     }
 }
 
-.story-link-container a.text-elements:hover {
-    opacity: 0.5;
-}
-
 @media screen and (min-width: 1000px) {
     .story-link-outer {
         margin: 0 auto;
@@ -208,6 +204,10 @@ img.logo.small {
 
 .logo-holder img.ilustra {
     width: 400px;
+}
+
+.logo-holder img.ilustra:hover {
+    opacity: 0.5;
 }
 
 .divider {
