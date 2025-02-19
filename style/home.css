@@ -28,8 +28,9 @@ p {
 
 a:link, 
 a:visited {
-    color: inherit;
+    color: #107777;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .hidden {
@@ -256,13 +257,12 @@ img.logo.small {
 }
 
 .block-container {
-    padding: 5px;
+    padding: 60px;
     padding-left: 10%;
     padding-right: 10%;
     font-size: 22px;
     text-align: center;
     padding-bottom: 60px;
-    margin-bottom: 20px;
 }
 
 .block-container p,
@@ -290,10 +290,15 @@ img.logo.small {
     text-align: center;
 }
 
+.block-container.creditos {
+    background-color: var(--color-research);
+}
+
 .block-container.creditos p {
-    color: var(--color-black);
+    color: var(--color-back);
     font-size: 16px;
 }
+
 
 .block-container.creditos p.category {
     font-weight: 600;
@@ -351,3 +356,39 @@ img.logo.small {
 }
 
 
+.category {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.license {
+    display: inline-block;
+    background: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.logos {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logos img {
+    height: 50px;
+}
