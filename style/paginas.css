@@ -1,76 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Newsreader:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap');
-
-
-* {box-sizing: border-box;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+* {
+    box-sizing: border-box;
 }
 
-/* Caption text */
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-.intro .title {
-    text-align: center;
-    margin: 0 auto;
+:root {
     font-family: system-ui, normal;
-    font-weight: 25px;
-    margin-top: 20px;
-    color: #46071F;
-    max-width: 500px; 
-    margin-bottom: 10px;
-    padding-top: 20px;
+    --color-highlight: #d4d4d5;
+    --color-back: #ffffff;
+    background-color: #ffffff;
+    --t: .5s;
+    --color-research: #107777;
+    --color-black: #494949;
+    --color-divider: #FF8833;
 }
 
-
-.byline{
-    text-align: justify;
-    margin: 0 auto;
-    font-family: system-ui, normal;
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 80px;
-    color: #46071F;
-}
-
-
-body {
-    font-feature-settings: 'kern'1, 'onum'0, 'liga'0, 'tnum'1;
-    color: #46071F;
-}
-
-p {
-    margin: 1.5rem 0;
-    font-size: 16px;
-    line-height: 1.7;
-    font-family: system-ui, normal;
+html {
+    scroll-behavior: smooth;
 }
 
 .section {
@@ -79,30 +23,387 @@ p {
     margin-top: 2px;
 }
 
-img {
-    max-width: 100%
+body {
+    margin: 0;
+    color: var(--color-back);
+    background-color: rgba(255, 250, 242, 1);
 }
 
-.full-size-image {
-    max-width: 1;
-    margin: 0 auto;
+p {
+    color: var(--color-black);
 }
 
-.plot-holder {
-    margin-bottom: 1em;
-}
-
-.plot-holder .caption {
-    color: #46071F;
-    text-align: right;
-    font-size: 0.75em;
-}
-
-.plot-holder h3 {
-    font-size: 2em;
-}
-
-.plot-holder .subtitle {
+a:link, 
+a:visited {
+    color: #107777;
+    text-decoration: none;
     font-weight: bold;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.text, .capitular-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black);
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-family: system-ui, normal;
+    text-align: justify;
+}
+
+.text h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-black);
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.capitular-text::first-letter {
+    font-size: 50px; /* O tamanho da letra inicial */
+    font-weight: bold;
+    color: #000;
+    float: left;
+    line-height: 1;
+    padding-right: 10px;
+    font-family: system-ui, normal;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.subtitle-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-black);
+    padding: 0 10%;  /* Define padding apenas nas laterais */
+    margin: 50px 0 10px;  /* Define margem superior e inferior */
+    text-align: center;
+}
+
+.title-holder .outer-title {
+    text-align: center;
+}
+
+.menu-container h1.outer-title {
+    color: var(--color-black);
+    font-size: 40px;
+}
+
+.logo-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    align-self: center;
+}
+
+img.logo {
+    width: 130px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.intro-container {
+    min-height: 99.9vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.intro-container-inner {
+    width: 80%;
+}
+
+.intro-container .img-holder.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-container .img-holder.logo.small {
+    margin-bottom: 0px;
+}
+
+.img-holder.logo.small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+img.logo.small {
+    width: 180px;
+}
+
+.intro-container img.harmonize-logo {
+    width: 70%;
+    max-width: 500px;
+    min-width: 250px;
+    margin-bottom: -40px;
+    margin-top: -30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .lead-holder p {
+        font-size: 20px;
+    }
+}
+
+.main-content {
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .main-content {
+        margin-bottom: 100px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .story-link-outer {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+map-container {
+    width: 600px; /* Defina um tamanho fixo ou relativo */
+    height: 400px; /* Ajuste conforme necessário */
+    max-width: 100%; /* Evita que ultrapasse a tela */
+    margin: auto; /* Centraliza */
+    position: relative;
+}
+
+
+/* Transição suave para opacidade */
+.fade {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Estado visível: opacidade total */
+  .visible {
+    opacity: 1;
+  }
+  
+  /* Estado invisível: totalmente transparente */
+  .invisible {
+    opacity: 0;
+  }
+  
+  /* Centraliza todo o conteúdo vertical e horizontalmente */
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  /* Centraliza a imagem inicial */
+  #central-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Container para as duas imagens lado a lado */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Estilo opcional para as imagens internas */
+  .img-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-holder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+.block-container {
+    padding: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.block-container.creditos {
+    background-color: var(--color-research);
+}
+
+.block-container.creditos p {
+    color: var(--color-back);
+    font-size: 16px;
+}
+
+.block-container.creditos p.category {
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+
+.logos {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logos img {
+    height: 50px;
+}
+
+
+/* Título e foto principal */
+.disease-topper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.disease-title {
+    text-align: center;
+    margin: 0 auto;
+    font-family: system-ui, normal;
+    font-weight: bold; 
+    text-transform: uppercase;
+    color: #46071F;
+    max-width: 500px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+.disease-subtitle {
+    text-align: center;
+    margin: 0 auto;
+    font-family: system-ui, normal;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #46071F;
+    max-width: 500px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+.image {
+    width: 100%;
+    text-align: center;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 3%;
+    margin-bottom: 3%; 
+}
+
+#imagem-corpo {
+    width: 100%;
+    max-width: 800px; /* Limita a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Certifica-se de que a imagem é exibida como um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.disease-main-image img {
+    width: auto;
+    height: auto;
+    max-width: 60%; /* Ajuste conforme necessário */
+    max-height: 60%; /* Ajuste conforme necessário */
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+/* Logo da Fiocruz */
+  .logo {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-grow: 1; /* Faz com que o logo ocupe o espaço restante */
+  }
+  
+  .logo img {
+    max-width: 200px; /* Limita a largura do logo para não ultrapassar o tamanho da barra */
+    height: auto;
+    margin-top: 20px;
+    margin-left: 30px; /* Mantém a proporção da imagem */
+  }
+
+
+/* Fotogal */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+    margin-top: 20px;
+    align-items: start;
+    transition: opacity 3s ease-in-out;
+    
+}
+
+.image1 {
+    grid-column: span 12;
+    text-align: center;
+}
+
+.image1 img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 5px;
+
+}
+
+.image2 {
+    grid-column: span 8;
+}
+
+.image3 {
+    grid-column: span 4;
+}
+
+.image2 img,
+.image3 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.caption {
+    grid-column: span 12;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    margin-top: 8px;
+}
