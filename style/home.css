@@ -106,7 +106,7 @@ img.logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("/img/cover.gif");
+    background-image: url("img/cover.gif");
     background-position: center;
     background-size: cover;
 }
