@@ -170,6 +170,21 @@
                 brasilImage.style.height = '100%';
                 brasilImage.style.objectFit = 'contain';
                 
+ 
+                // Criar texto "Brasil"
+ 
+                const brasilText = document.createElement('div');
+                brasilText.textContent = 'BRASIL';
+                brasilText.style.position = 'absolute';
+                brasilText.style.top = '49%';
+                brasilText.style.left = '55%';
+                brasilText.style.transform = 'translate(-50%, -50%)';
+                brasilText.style.color = config.insetOptions?.textColor || 'black';
+                brasilText.style.fontSize = config.insetOptions?.textSize || '10px';
+                brasilText.style.fontWeight = 'semi-bold';
+                brasilText.style.textShadow = '1px 1px 2px white'; // Para melhor legibilidade
+                brasilText.style.pointerEvents = 'none'; // Para não interferir com outros elementos
+
                 // Criar um wrapper para o marcador que vai servir como área de conteúdo do mapa
                 const markerArea = document.createElement('div');
                 markerArea.style.position = 'absolute';
@@ -194,7 +209,8 @@
                 minimapContainer.appendChild(brasilImage);
                 markerArea.appendChild(marker);
                 minimapContainer.appendChild(markerArea);
-                map.getContainer().appendChild(minimapContainer);
+                map.getContainer().appendChild(minimapContainer)
+                minimapContainer.appendChild(brasilText);
                 
                 // Obter a posição inicial (primeira tela)
                 const initialCenter = map.getCenter();
@@ -235,17 +251,6 @@
     brasilImage.onload = setInitialMarkerPosition;
     setInitialMarkerPosition();
 
-    // Variável de controle para esconder o mini mapa
-    let minimapVisible = true;
-
-    // Escutar a mudança de estilo do mapa e esconder o mini mapa quando o estilo mudar para o ID 2
-    map.on('styledata', () => {
-        const currentStyle = map.getStyle().metadata['mapbox:style'];
-        if (currentStyle && currentStyle === 'mocajuba') {  // Verifique se o estilo atual é o ID 2
-            minimapContainer.style.display = 'none';  // Esconde o mini mapa
-            minimapVisible = false;
-        }
-    });
 }
             if (config.showMarkers) {
                 var marker = new mapboxgl.Marker({ color: 'black' });
@@ -333,7 +338,168 @@
                 }
             });  
             
-    
+
+            map.on('load', () => {
+                map.addSource('cidades', {
+                    type: 'geojson',
+                    data: {
+                        type: 'FeatureCollection',
+                        features: [
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-49.5056, -2.2444]
+                                },
+                                properties: {
+                                    name: 'Cametá',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-49.5025507, -2.5795646]
+                                },
+                                properties: {
+                                    name: 'Mocajuba',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-48.612019, -1.3413464]
+                                },
+                                properties: {
+                                    name: 'Belém',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-51.2601441, 0.1015795]
+                                },
+                                properties: {
+                                    name: 'Macapá',
+                                    state: 'Amapá'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-48.4282678, -1.3598227]
+                                },
+                                properties: {
+                                    name: 'Ananindeua',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-49.1422943, -5.3375369]
+                                },
+                                properties: {
+                                    name: 'Marabá',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-47.4895861, -0.7083102]
+                                },
+                                properties: {
+                                    name: 'Barcarena',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-48.7999786, -1.1963762]
+                                },
+                                properties: {
+                                    name: 'Castanhal',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-50.9326482, -1.7437195]
+                                },
+                                properties: {
+                                    name: 'Breves',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-50.1489642, -1.1954854]
+                                },
+                                properties: {
+                                    name: 'Soure',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-47.7403933, -2.4204827]
+                                },
+                                properties: {
+                                    name: 'Tucuruí',
+                                    state: 'Pará'
+                                }
+                            },
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: [-51.1820912, -3.7849726]
+                                },
+                                properties: {
+                                    name: 'Parauapebas',
+                                    state: 'Pará'
+                                }
+                            }
+                        ]
+                    }
+                });            
+            
+            
+                // Adicionar camada de texto
+                map.addLayer({
+                    'id': 'cidades-label',
+                    'type': 'symbol',
+                    'source': 'cidades',
+                    'layout': {
+                        'text-field': ['get', 'name'],
+                        'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+                        'text-size': 14,
+                        'text-offset': [0, 1.5],
+                        'text-anchor': 'top'
+                    },
+                    'paint': {
+                        'text-color': '#FFFFFF', // Cor do texto totalmente branca
+                        'text-halo-width': 0 // Removendo qualquer borda/halo
+                    }
+                });
+            });
     
       // Configurar o scroll para tela cheia
         

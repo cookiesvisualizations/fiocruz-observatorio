@@ -3,7 +3,7 @@
 }
 
 :root {
-    font-family: system-ui, normal;
+    font-family: 'Lora', serif;;
     --color-highlight: #d4d4d5;
     --color-back: #ffffff;
     background-color: #ffffff;
@@ -49,14 +49,14 @@ a:visited {
 }
 
 .text, .capitular-text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--color-black);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
     margin-bottom: 20px;
-    margin-top: 40px;
-    font-family: system-ui, normal;
+    margin-top: 30px;
+    font-family: 'Lora', serif;;
     text-align: justify;
 }
 
@@ -78,14 +78,14 @@ a:visited {
     color: #000;
     float: left;
     line-height: 1;
-    padding-right: 10px;
-    font-family: system-ui, normal;
+    padding-right: 12px;
+    font-family: 'Lora', serif;;
     padding-top: 10px;
     padding-bottom: 5px;
 }
 
 .subtitle-text {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: var(--color-black);
     padding: 0 10%;  /* Define padding apenas nas laterais */
@@ -296,7 +296,7 @@ map-container {
 .disease-title {
     text-align: center;
     margin: 0 auto;
-    font-family: system-ui, normal;
+    font-family: 'Lora', serif;;
     font-weight: bold; 
     text-transform: uppercase;
     color: #46071F;
@@ -309,7 +309,7 @@ map-container {
 .disease-subtitle {
     text-align: center;
     margin: 0 auto;
-    font-family: system-ui, normal;
+    font-family: 'Lora', serif;;
     font-weight: bold;
     font-size: 30px;
     text-transform: uppercase;
