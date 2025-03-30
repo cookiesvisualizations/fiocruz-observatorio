@@ -9,7 +9,7 @@ var config = {
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: true,
     insetOptions: {
-        markerColor: 'green'
+        markerColor: 'black'
     },
     insetPosition: 'top-right',
     theme: 'light',
@@ -20,7 +20,7 @@ var config = {
             id: 'baixo-tocantins',
             alignment: 'left',
             hidden: false,
-            image: './assets/washington-dc.jpg',
+            image: './img/cover_amazonia.jpg',
             description: 'A paisagem do Baixo Tocantins é marcada por uma interação constante entre o rio e o cotidiano de seus habitantes.',
             location: {
                 center: [-49.50697, -2.57502]                ,
