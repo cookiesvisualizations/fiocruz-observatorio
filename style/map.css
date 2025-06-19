@@ -3,12 +3,6 @@
                 padding: 0;
                 font-family: sans-serif;
             }
-    
-            a,
-            a:hover,
-            a:visited {
-                color: #0071bc;
-            }
             
             .map-container {
                 width: 100%;
@@ -23,6 +17,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                margin-top: 50px;
             }
             
             #story {
@@ -38,12 +33,14 @@
                 font-family: "Tahoma", sans-serif;
                 font-size: 16px;
                 line-height: 1.5;
+                margin-top: 50px;
             }
             
             #story::-webkit-scrollbar {
                 width: 0px; /* Esconde a barra de rolagem */
                 background: transparent; /* Torna o fundo transparente */
-            }
+                display: none;
+                }
             
             #story::-webkit-scrollbar-thumb {
                 background: transparent; /* Deixa a "thumb" (o botão da barra de rolagem) invisível */

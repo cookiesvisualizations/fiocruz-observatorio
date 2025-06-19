@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Observatório de Clima e Saúde</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fiocruz">
+  <meta name="title" content="Observatório de Clima e Saúde">
+  <meta name="description" content="Observatório de Clima e Saúde">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:description" content="Observatório de Clima e Saúde">
+  <meta property="og:title" content="Observatório de Clima e Saúde">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style/paginas.css">
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+  
+  <div class="navbar" id="navbar">
+    <div class="nav-left"></div> <!-- Espaço à esquerda para centralizar -->
+    
+    <div class="logo">
+      <a href="https://climaesaude.icict.fiocruz.br/">
+        <img src="img/logo.png" alt="Logo" />
+      </a>
+    </div>
+  
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="amazonia.html">Amazônia</a></li>
+        <li><a href="semiarido.html">Semiárido</a></li>
+        <li><a href="https://shiny.icict.fiocruz.br/sent_micr_harmonize/">Painel Integrado</a></li>
+        <li><a href="https://harmonize.icict.fiocruz.br/mapa/">Mapa</a></li>
+      </ul>
+    </nav>
+  
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="navbar-spacer"></div>
+  
+    <!-- Conteúdo da página -->
+
+  <!-- Main content container -->
+   
+  <div class="disease-topper">
+    <div class="subtitle-wrapper">
+    <h2 class="disease-subtitle-semiarido">Semiárido</h2>
+    </div>
+      <h1 class="disease-title">Patos e <br> Mãe d’Água <br></h1>
+      <div class="image">
+        <img id="imagem-corpo" src="img/cover_amazonia.jpg" alt="Imagem principal">
+        <p class="image-caption">Vista aérea da região de Cametá e Mocajuba.</p>
+    </div>
+</div>
+
+
+    <!-- Intro -->
+    <div class="text">
+      <p class="capitular-text">As mudanças climáticas, tanto no Brasil quanto em outras partes do mundo, têm como uma das suas principais consequências o avanço das doenças tropicais, como a dengue, a doença de Chagas e a malária.</p>
+      <p class="text">No estado do Pará, na região Norte do Brasil, os municípios de Mocajuba e Cametá, localizados no Baixo Tocantins, enfrentam ano após ano o aumento desses casos. Esse fenômeno se agrava ainda mais devido às transformações sociais e econômicas na região.</p>
+      <p class="text">Essas cidades, situadas nas margens do rio Tocantins, apresentam uma rica diversidade de paisagens urbanas e rurais, além de abrigarem comunidades quilombolas e povos indígenas.</p>
+      <p class="text">Para entender os impactos das mudanças climáticas e das ações antrópicas no meio ambiente, a equipe do projeto <a href="https://www.harmonize-tools.org/" target="_blank">Harmonize</a> percorreu a área, investigando como fatores como desmatamento, expansão agrícola e alterações climáticas vêm impactando a saúde das populações locais.</p>
+  </div>
+
+  
+
+    <!-- Mapa -->  
+    <div class="map">
+      <div class="map-container">
+        <meta charset='utf-8' />
+        <title>Mapbox Storytelling</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <link rel="icon" type="image/x-icon"
+            href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css' rel='stylesheet' />
+        <script src="https://cdn.jsdelivr.net/npm/mapbox-gl-globe-minimap@1.2.0/dist/bundle.js"></script>
+        <script src="https://unpkg.com/scrollama"></script>
+        <link rel="stylesheet" href="style/map.css">
+    
+        <div id="map"></div>
+        <div id="story"></div>
+    
+        <script src="./map-narrative-semiarido.js"></script>
+        <script src="./map-config-semiarido.js"></script>
+      </div>
+    </div>
+    
+    <!-- Subcapítulo -->
+    <div class="text">
+      <div class="subtitle">
+          <h2 class="subtitle-text">Diagnóstico</h2>
+      </div>
+  
+      <p class="text">O principal objetivo era compreender como a paisagem da região influenciava a proliferação de doenças na população. Além disso, foram realizadas entrevistas com as comunidades locais para avaliar o impacto das doenças infecciosas, o uso de tecnologias para acesso a informações, à compreensão sobre as mudanças climáticas e os desafios locais enfrentados.</p>
+      <p class="text">Dados do Datasus (SIVEP-Malária) indicam que, em 2023, o município de Mocajuba não notificou casos autóctones ou importados de malária. Já no município de Cametá, houve apenas um registro de caso de malária importado provindo do município de Macapá-AP, não tendo havido casos de malária autóctone.</p>
+      <p class="text">Em relação aos casos de Doença de Chagas, foram registrados pelo SINAN (segundo o Datasus) 58 casos no município de Cametá (43 por 100.000 habitantes) no ano de 2023. O município de Mocajuba não registrou casos de Doença de Chagas no ano de 2023.</p>
+      <p class="text">Analisando os casos de dengue do Datasus relativos ao município de Cametá, tem-se o registro de 52 casos (38,7 casos por 100.000 habitantes) no ano de 2023. Não há registros de casos de Dengue no Datasus para o município de Mocajuba.</p>
+      
+  
+      <!-- Imagem principal -->
+      <div class="image">
+          <img id="imagem-corpo" src="img/foto_amazonia_harmonize/foto_exemplo_dashboard.png" alt="Imagem principal">
+          <p class="image-caption">Exemplo de dashboard construído para monitoramento das doenças nas cidades</p>
+        </div>
+  
+      <p class="text">Para investigar a relação entre o ambiente e a disseminação de doenças, drones sobrevoaram áreas urbanas, periurbanas e rurais, mapeando paisagens que poderiam revelar pontos críticos de transmissão.</p>
+      <p class="text">As imagens captadas revelam locais com acúmulo de lixo, pontos de água parada e grandes áreas de desmatamento.</p>
+      <p class="text">A equipe do projeto também entrevistou moradores, lideranças quilombolas e gestores municipais, que forneceram um panorama mais detalhado das percepções locais sobre os impactos do clima e da falta de infraestrutura.</p>
+      <p class="text">Um dos locais analisados foi a hidrelétrica de Mocajuba. As imagens mostram que a estrutura modificou o curso do rio, criando áreas alagadas que se tornaram criadouros de doenças. Além disso, moradores relataram que essa alteração reduziu a população de anfíbios, comprometendo um importante mecanismo natural de controle desses vetores.</p>
+
+      
+      <!-- Imagem principal -->
+      <div class="image">
+        <img id="imagem-corpo" src="https://media.githubusercontent.com/media/cookiesvisualizations/fiocruz-observatorio/refs/heads/main/img/cover.gif" alt="Imagem principal">
+      </div>
+      <p class="text">O agronegócio também foi apontado como um dos responsáveis pelo aumento de doenças na região. Moradores relataram que a expansão do setor resultou na expulsão de pessoas e animais de suas terras, além de problemas respiratórios causados pelas queimadas.</p>
+      <p class="text">Essa transformação ambiental impacta diretamente o aumento e a dispersão de vetores de doenças. A destruição de habitats naturais força vetores, como mosquitos e roedores, a migrarem para novas áreas, muitas vezes mais próximas das comunidades humanas.</p>
+      <p class="text">Além disso, as queimadas e o desmatamento criam solos degradados com acúmulo de água, favorecendo a reprodução de insetos transmissores de doenças, como o <i>Aedes aegypti</i>. A redução de predadores naturais, como anfíbios e aves insetívoras, também contribui para o descontrole populacional desses vetores.</p>
+      <p class="text">Com essas mudanças, vetores que antes estavam restritos a determinadas áreas acabam se espalhando e se adaptando a novos territórios, elevando o risco de surtos de doenças infecciosas em regiões antes menos afetadas.</p>
+      
+      
+      <!-- Imagem principal -->
+      <div class="image">
+        <img id="imagem-corpo" src="img/foto_amazonia_harmonize/foto_queimada_doencas.jpg" alt="Imagem principal">
+        <p class="image-caption"> As queimadas e o desmatamento criam solos degradados com acúmulo de água, favorecendo a reprodução de insetos transmissores de doenças</p>
+    </div>
+    </div>
+
+    <div class="text">
+      <div class="subtitle">
+        <h2 class="subtitle-text">Intervenções</h2>
+
+
+        <p class="text">Como parte do projeto, foram feitas algumas intervenções na região para tornar Mocajuba e Cametá mais resilientes às mudanças climáticas.</p>
+        <p class="text">Foram promovidas oficinas em escolas e centros comunitários, nas quais profissionais de saúde, educação e meio ambiente participaram de atividades como cartografia participativa e jogos educativos sobre os vetores das doenças que acometem a região.</p>
+        <p class="text">Em Cametá, foram instaladas estações meteorológicas para monitorar variáveis climáticas e o nível do rio. Essas informações vão ajudar gestores a tomar decisões mais precisas, a partir de análises de dados e o uso de ferramentas. Até então, a cidade não possuía nenhum ponto de medição, um vazio de informações climáticas.</p>
+        <p class="text">Outra intervenção significativa foi o uso das imagens feitas pelos drones para capacitar a população local na identificação de paisagens críticas para a transmissão de doenças. O material gerado pelos drones foi cedido à comunidade, permitindo que ela mapeasse áreas com potencial risco de surtos, contribuindo para a prevenção e o controle de doenças.</p>
+
+        
+    </div>
+      <!-- Galeria de imagens -->
+      <div class="image-grid">
+          <div class="image1">
+              <img src="img/foto_amazonia_harmonize/foto_reuniao_1.jpg" alt="Imagem principal">
+              <p class="caption">Registro de uma das oficinas realizadas durante a viagem por Cametá e Mocajuba</p>
+          </div>
+          <div class="image2">
+              <img src="img/foto_amazonia_harmonize/foto_reuniao_2.jpg" alt="Imagem esquerda">
+          </div>
+          <div class="image3">
+              <img src="img/cover_semiarido.jpg" alt="Imagem direita">
+          </div>
+      </div>
+  
+      <p class="caption">Reunião contou com participação da sociedade civil das duas cidades</p>
+  </div>
+
+  <div class="text">
+
+    <div class="subtitle">
+      <h2 class="subtitle-text">Resultados e Perspectivas</h2>
+  </div>
+  <p class="text">As atividades resultaram em um mapeamento detalhado das paisagens de risco e na criação de uma base de dados meteorológicos e entomológicos. Os insetos coletados foram enviados para laboratórios como o Instituto Evandro Chagas, onde serão analisados para identificar as espécies predominantes na região.</p>
+  <p class="text">Outro ponto-chave foi o diagnóstico participativo, que mostrou a percepção clara dos moradores sobre o aumento das temperaturas e a irregularidade das chuvas. Demandas emergiram, principalmente ligadas a saneamento, gestão de resíduos e políticas para conter a expansão desordenada do agronegócio.</p>
+  <p class="text">O trabalho também fortaleceu a articulação com gestores municipais e comunidades quilombolas, promovendo discussões sobre saúde e ambiente. As informações coletadas alimentarão o Sistema Harmonize, auxiliando futuras decisões políticas e prevenção de doenças.</p>
+  
+  
+    </div>
+  
+  <!-- <section class="sistema-harmonize">
+  <div class="text">
+    <div class="subtitle">
+        <h2 class="subtitle-text">Navegue nos dados completos do Harmonize</h2>
+    </div>
+  <iframe src="https://shiny.icict.fiocruz.br/sent_micr_harmonize/" width="100%" height="1200px" frameborder="0"></iframe>
+  </section> -->
+    <!-- Footer --> 
+    
+    
+    <section class="creditos">
+      <div class="block creditos">
+          <div class="block-container creditos">
+              <p class="category">Observatório de Clima e Saúde</p>
+              <p class="info">Campus Sede: Av. Brasil, 4363 - Manguinhos, Rio de Janeiro CEP: 21040-900 - Sala: 231 - Tel.: (021) 3865-3222</p>
+              <p class="info">Este site é regido pela <strong>Política de Acesso Aberto ao Conhecimento</strong>, que busca garantir à sociedade o acesso gratuito, público e aberto ao conteúdo integral de toda obra intelectual produzida pela Fiocruz.</p>
+              <p class="info"><span class="license">CC BY-NC</span> O conteúdo deste site pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores.</p>
+              <p class="category">Copyright © Fundação Oswaldo Cruz - Ministério da Saúde - 2025</p>
+    
+              <div class="logos">
+                  <img src="img/logos/logo-acesso-aberto.png" alt="10 anos Política de Acesso Aberto da Fiocruz">
+                  <img src="img/logos/logo-icict.png" alt="ICICT - Instituto de Comunicação e Informação Científica e Tecnológica em Saúde">
+                  <img src="img/logos/logo-fiocruz.png" alt="Fiocruz">
+                  <img src="img/logos/logo-sus.png" alt="SUS">
+                  <img src="img/logos/logo-ministerio-saude.png" alt="Ministério da Saúde">
+                  <img src="img/logos/logo-governo-brasil.png" alt="Governo Federal - Brasil União e Reconstrução">
+              </div>
+          </div>
+      </div>
+    </section>  
+</body>
+</html>
