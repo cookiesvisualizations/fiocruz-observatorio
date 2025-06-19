@@ -54,16 +54,17 @@ a:visited {
 }
 
 .text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--color-black);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
     margin-bottom: 20px;
-    margin-top: 40px;
-    font-family: system-ui, normal;
+    margin-top: 30px;
+    font-family: 'Lora', serif;;
     text-align: justify;
 }
+
 
 .text h1 {
     font-size: 25px;
@@ -175,8 +176,8 @@ img.logo.small {
     justify-content: center;
     align-items: center;
     gap: 32px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-bottom: 20px;
     margin-top: 40px;
     text-align: justify;
@@ -185,7 +186,7 @@ img.logo.small {
 
 .story-link-container h1 {
     margin-top: 5px;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 0px;
 }
 
@@ -205,6 +206,7 @@ img.logo.small {
 
 .logo-holder img.ilustra {
     width: 400px;
+    padding-top: 50px;
 }
 
 .logo-holder img.ilustra:hover {

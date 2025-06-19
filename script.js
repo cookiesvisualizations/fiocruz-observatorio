@@ -24,3 +24,42 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(image); // Inicia a observação de cada imagem
     });
 });
+
+
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollTop && currentScroll > 50) {
+    // ROLANDO PARA BAIXO: esconde
+    navbar.classList.add("hide");
+  } else if (currentScroll < lastScrollTop) {
+    // ROLANDO PARA CIMA: mostra em modo pequeno
+    navbar.classList.remove("hide");
+    navbar.classList.add("shrink");
+  }
+
+  if (currentScroll <= 0) {
+    // Volta ao tamanho normal no topo da página
+    navbar.classList.remove("shrink");
+  }
+
+  lastScrollTop = currentScroll;
+});
+
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Opcional: fecha menu ao clicar em um link
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
