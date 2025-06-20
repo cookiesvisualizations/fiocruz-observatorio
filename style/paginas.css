@@ -186,6 +186,27 @@ a:visited {
   transition: all 0.3s ease;
 }
 
+@media (min-width: 769px) {
+  .navbar .nav-links {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .navbar .nav-links li {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+
 /* Layout mobile */
 @media (max-width: 768px) {
   .navbar {
