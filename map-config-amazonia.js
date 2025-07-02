@@ -78,6 +78,13 @@
                     var image = new Image();
                     image.src = record.image;
                     chapter.appendChild(image);
+
+                    if (record.caption) {
+                        var caption = document.createElement('p');
+                        caption.className = 'image-map-caption';
+                        caption.innerText = record.caption;
+                        chapter.appendChild(caption);
+                    }
                 }
     
                 if (record.description) {

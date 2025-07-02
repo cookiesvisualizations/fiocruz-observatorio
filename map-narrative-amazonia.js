@@ -21,6 +21,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './img/foto_amazonia_harmonize/foto_1_mapa.jpg',
+            caption: 'Vista do Rio Jacarecaia, braço do Rio Tocantins',
             description: 'A paisagem do Baixo Tocantins é marcada pela interação constante entre o rio e o cotidiano de seus habitantes.',
             location: {
                 center: [-49.50697, -2.57502]                ,
@@ -45,6 +46,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             image: './img/foto_amazonia_harmonize/foto_2_mapa.jpg',
+            caption: 'Moradores vivem com escassez de água potável mesmo às margens do rio',
             description: 'Em Mocajuba, moradores relatam dificuldades de abastecimento de água limpa e segura para consumo, apesar de estarem tão próximos ao rio.',
             location: {
                 center: [-49.47754, -2.55003],
@@ -63,6 +65,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             image: './img/foto_amazonia_harmonize/foto_3_mapa.jpg',
+            caption: 'Foto tirada durante a visita ao município de Cametá',
             description: 'Já em Cametá, o aumento das temperaturas e a irregularidade das chuvas afetam diretamente a produção agrícola da região.',
             location: {
                 center: [-49.51021, -2.28107],
@@ -81,26 +84,8 @@ var config = {
             alignment: 'fully',
             hidden: false,
             image: './img/foto_amazonia_harmonize/foto_4_mapa.jpg',
+            caption: 'Cenário de saneamento inadequado, como o acúmulo de lixo e a ausência de infraestrutura básica, expõem a população de Mocajuba a riscos constantes à saúde',
             description: 'Além disso, questões de saneamento precário são evidentes: lixo acumulado, esgoto a céu aberto e a falta de acesso à água potável. Esses problemas criam um ambiente propício para a proliferação de doenças infecciosas, incluindo aquelas transmitidas por vetores, como a dengue e malária.',
-            location: {
-                center: [-49.56344, -2.44984],
-                zoom: 8.42,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'saneamento-2',
-            alignment: 'fully',
-            hidden: false,
-            title: '',
-            image: '',
-            description: 'A expansão de áreas agrícolas e o desmatamento para pastagens modificam ecossistemas e aproximam insetos transmissores de doenças de áreas habitadas.',
             location: {
                 center: [-49.56344, -2.44984],
                 zoom: 8.42,
@@ -117,7 +102,8 @@ var config = {
             id: 'mocajuba-2',
             alignment: 'right',
             hidden: false,
-            image: './assets/geneva.jpg',
+            image: './img/foto_amazonia_harmonize/foto_5_mapa.jpg',
+            caption: 'Com a vegetação nativa sendo substituída por plantações e pastos, espécies antes restritas à floresta passam a circular em áreas povoadas',
             description: 'A expansão de áreas agrícolas e o desmatamento para pastagens modificam ecossistemas e aproximam insetos transmissores de doenças de áreas habitadas.',
             location: {
                 center: [-49.47754, -2.55003],
@@ -135,7 +121,8 @@ var config = {
             id: 'cameta-2',
             alignment: 'right',
             hidden: false,
-            image: './assets/buenos-aires.jpg',
+            image: './img/foto_amazonia_harmonize/foto_6_mapa.jpg',
+            caption: 'Armadilha para mosquitos instalados na localidade de Merajuba, Cametá',
             description: 'Também foram identificados casos da Doença de Chagas oral em Cametá.',
             location: {
                 center: [-49.51021, -2.28107],
