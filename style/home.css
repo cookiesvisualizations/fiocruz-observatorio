@@ -427,8 +427,8 @@ img.logo.small {
     background-color: var(--color-research);
     width: 100vw;
     margin-left: calc(-1 * ((100vw - 100%) / 2));
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
     box-sizing: border-box;
 }
 
