@@ -735,3 +735,11 @@ map-container {
     grid-column: span 1 !important;
   }
 }
+
+.block-container.creditos {
+    background-color: var(--color-research);
+    max-width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
