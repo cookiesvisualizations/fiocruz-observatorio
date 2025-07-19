@@ -23,7 +23,7 @@
 }
 /* ========================= SEÇÃO FERRAMENTAS (FUNDO LARANJA) ========================= */
 .block-container.ferramentas h1.text {
-    color: #fff !important;
+    color: #000000 !important;
     text-align: center;
     font-size: 30px;
     font-weight: bold;

@@ -49,8 +49,8 @@ var config = {
             caption: 'Moradores vivem com escassez de água potável mesmo às margens do rio',
             description: 'Em Mocajuba, moradores relatam dificuldades de abastecimento de água limpa e segura para consumo, apesar de estarem tão próximos ao rio.',
             location: {
-                center: [-49.47754, -2.55003],
-                zoom: 10.8,
+                center: [-49.50542614323808, -2.58119363771292],
+                zoom: 15,
                 pitch: 0.00,
                 bearing: 0.00
             },
@@ -68,8 +68,8 @@ var config = {
             caption: 'Foto tirada durante a visita ao município de Cametá',
             description: 'Já em Cametá, o aumento das temperaturas e a irregularidade das chuvas afetam diretamente a produção agrícola da região.',
             location: {
-                center: [-49.51021, -2.28107],
-                zoom: 10.8,
+                center: [-49.4972004682672, -2.2446163513113566],
+                zoom: 15,
                 pitch: 0,
                 bearing: 0
             },
@@ -106,7 +106,7 @@ var config = {
             caption: 'Com a vegetação nativa sendo substituída por plantações e pastos, espécies antes restritas à floresta passam a circular em áreas povoadas',
             description: 'A expansão de áreas agrícolas e o desmatamento para pastagens modificam ecossistemas e aproximam insetos transmissores de doenças de áreas habitadas.',
             location: {
-                center: [-49.47754, -2.55003],
+                center: [-49.50542614323808, -2.58119363771292],
                 zoom: 10.8,
                 pitch: 0.00,
                 bearing: 0.00
@@ -125,8 +125,8 @@ var config = {
             caption: 'Armadilha para mosquitos instalados na localidade de Merajuba, Cametá',
             description: 'Também foram identificados casos da Doença de Chagas oral em Cametá.',
             location: {
-                center: [-49.51021, -2.28107],
-                zoom: 10.8,
+                center: [-49.4972004682672, -2.2446163513113566],
+                zoom: 15,
                 pitch: 0,
                 bearing: 0
             },
