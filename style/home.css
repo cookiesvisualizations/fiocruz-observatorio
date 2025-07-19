@@ -1,3 +1,73 @@
+.divider-green {
+  border: none;
+  border-top: 2px solid #007c4b;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+/* ========================= LINHAS DIVISÓRIAS ========================= */
+}
+.ferramenta-link {
+  color: var(--color-black) !important;
+  text-decoration: none;
+}
+.block-container.ferramentas {
+    background-color: var(--color-divider);
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+/* Link de ferramenta destacado */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+}
+/* ========================= SEÇÃO FERRAMENTAS (FUNDO LARANJA) ========================= */
+.block-container.ferramentas h1.text {
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    width: 100%;
+    font-family: 'Lora', serif;
+}
+.block-container.ferramentas p.text {
+    color: #222 !important;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: normal;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    background: transparent;
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .block-container.ferramentas p.text {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        font-size: 16px;
+    }
+}
+.block-container.research h1.text {
+/* Responsividade para parágrafo de ferramentas */
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+/* ========================= SEÇÃO PESQUISADORES (FUNDO VERDE) ========================= */
+    font-family: 'Lora', serif;
+}
 * {
     box-sizing: border-box;
 }
@@ -6,9 +76,11 @@
     font-family: system-ui, normal;
     --color-highlight: #d4d4d5;
     --color-back: #ffffff;
+/* Box-sizing global */
     background-color: #fffaf2;
     --t: .5s;
     --color-research: #107777;
+/* ========================= VARIÁVEIS E CORES ========================= */
     --color-black: #494949;
     --color-divider: #FF8833;
 }
@@ -19,34 +91,37 @@ html {
 
 body {
     margin: 0;
+/* Comportamento de rolagem suave */
     color: var(--color-back);
 }
 
+/* ========================= ESTILOS GERAIS ========================= */
 p {
     color: var(--color-black);
 }
 
 a:link, 
-/* Remova o peso geral do link visitado */
 a:visited {
     color: #107777;
+/* Links padrão e visitados */
     text-decoration: none;
     font-weight: bold;
   }
   
-  /* Aplique o negrito só no h1 dentro do link visitado */
   a:visited h1 {
     font-weight: bold;
   }
 
 .hidden {
     display: none !important;
+/* Utilitários de visibilidade */
 }
 
 .visible {
     opacity: 1;
 }
 
+/* Animação bounce para elementos animados */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: scale(1.5, 0.5) translateY(0);
@@ -58,6 +133,7 @@ a:visited {
         transform: scale(1.5, 0.5) translateY(-15px);
     }
 }
+/* ========================= TEXTO PADRÃO ========================= */
 
 .text {
     font-size: 18px;
@@ -70,13 +146,14 @@ a:visited {
     font-family: 'Lora', serif;;
     text-align: justify;
     font-weight: normal;
+/* Responsividade para texto padrão */
 }
 
 @media (max-width: 768px) {
     .text{
         padding-left: 5%;
         padding-right: 5%;
-        font-size: 16px; /* Opcional: levemente menor para telas pequenas */
+        font-size: 16px; 
     }
 }
 
@@ -87,6 +164,7 @@ a:visited {
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 50px;
+/* Título centralizado */
     margin-bottom: 10px;
     text-align: center;
 }
@@ -94,6 +172,7 @@ a:visited {
 .title-holder .outer-title {
     text-align: center;
 }
+/* ========================= LOGOS E IMAGENS ========================= */
 
 .menu-container h1.outer-title {
     color: var(--color-black);
@@ -146,6 +225,7 @@ img.logo {
     left: 0;
     margin-top: 20px;
     margin-left: 20px;
+/* ========================= RESPONSIVIDADE ========================= */
 }
 
 
@@ -165,6 +245,7 @@ img.logo.small {
 }
 
 @media screen and (max-width: 1000px) {
+/* ========================= SEÇÃO ÁREAS DE ESTUDO ========================= */
     .lead-holder p {
         font-size: 20px;
     }
@@ -200,6 +281,7 @@ img.logo.small {
     text-align: justify;
     width: 100%;
 }
+/* Responsividade para texto das áreas de estudo */
 
 .story-link-container h1 {
     margin-top: 5px;
@@ -230,7 +312,7 @@ img.logo.small {
     .story-link-container text{
         padding-left: 5%;
         padding-right: 5%;
-        font-size: 16px; /* Opcional: levemente menor para telas pequenas */
+        font-size: 16px; 
     }
 }
 
@@ -261,15 +343,16 @@ img.logo.small {
     .story-link-container {
         display: flex;
         flex-direction: column-reverse;
-        padding-left: 5%;   /* menor padding como no texto */
-        padding-right: 5%;  /* idem */
+        padding-left: 5%;  
+        padding-right: 5%; 
+/* ========================= BLOCO GERAL ========================= */
         gap: 32px;
         justify-content: center;
-        font-size: 16px;    /* igual ao texto no mobile */
-        line-height: 1.5;   /* para manter boa leitura */
-        color: var(--color-black); /* se quiser a mesma cor */
-        font-family: 'Lora', serif; /* mesma fonte */
-        text-align: justify; /* alinhamento igual */
+        font-size: 16px;   
+        line-height: 1.5;  
+        color: var(--color-black); 
+        font-family: 'Lora', serif; 
+        text-align: justify; 
     }
 
     .story-link-container span.rounded-borders {
@@ -313,6 +396,7 @@ img.logo.small {
 .block-container h1,
 .block-container h3 {
     color: var(--color-back);
+/* ========================= PESQUISADORES ========================= */
 }
 
 .block-container span.rounded-borders {
@@ -324,6 +408,11 @@ img.logo.small {
 
 .block-container.research {
     background-color: var(--color-research);
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
 }
 
 .block-container.research h2 {
@@ -336,6 +425,11 @@ img.logo.small {
 
 .block-container.creditos {
     background-color: var(--color-research);
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
 }
 
 .block-container.creditos p {
@@ -351,51 +445,84 @@ img.logo.small {
 
 .pesquisadores {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+/* Responsividade para grid de pesquisadores */
+    align-items: flex-start;
+    gap: 0;
+    row-gap: 30px;
 }
 
 .pesquisadores .pesquisador {
-    flex: 1 1 calc(33.333% - 20px); /* Por padrão, em 3 colunas */
-    margin: 10px;
-    margin-top: 40px;
+    flex: 0 1 25%;
+    max-width: 25%;
+    margin: 0;
     text-align: center;
 }
 
 .pesquisadores .pesquisador-foto {
-    width: 150px; /* Define um tamanho fixo para todas as imagens */
-    height: 150px; /* Mantém a altura uniforme */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-    border-radius: 50%; /* Opcional: arredonda a imagem para um visual mais elegante */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .pesquisadores h1 {
     font-size: 20px;
+/* ========================= CRÉDITOS E RODAPÉ ========================= */
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
     text-align: center;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lora', serif;
 }
 
 .pesquisadores p {
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lora', serif;
 }
 
 .pesquisadores a.text-elements:hover {
     opacity: 0.5;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .pesquisadores .pesquisador {
-        flex: 1 1 100%; /* Cada pesquisador ocupa toda a largura */
-    }
+/* Responsividade para logos e capa mobile */
 
+@media (max-width: 768px) {
+    .pesquisadores {
+        gap: 10px;
+        justify-content: center;
+    }
+    .pesquisadores .pesquisador {
+        max-width: 45%;
+        flex: 0 1 45%;
+        margin-top: 20px;
+    }
     .pesquisadores .pesquisador-foto {
-        width: 120px; /* Ajusta o tamanho da imagem */
+        width: 120px;
         height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pesquisadores {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -439,20 +566,18 @@ strong {
 
 @media (max-width: 768px) {
     .intro-container {
-      position: relative; /* necessário para o posicionamento absoluto funcionar corretamente */
+      position: relative;
     }
-  
     .img-holder.logo.small {
       position: absolute;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
       margin: 0;
-      z-index: 10; /* garante que fique acima de outros elementos, se necessário */
+      z-index: 10;
     }
-  
     img.logo.small {
-      width: 150px; /* opcional: ajuste de tamanho no mobile */
+      width: 150px;
       height: auto;
     }
   }

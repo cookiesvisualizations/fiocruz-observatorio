@@ -16,138 +16,101 @@ var config = {
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
     chapters: [
-        {
-            id: 'baixo-tocantins',
-            alignment: 'left',
-            hidden: false,
-            image: './img/foto_amazonia_harmonize/foto_1_mapa.jpg',
-            description: 'A paisagem do Baixo Tocantins é marcada pela interação constante entre o rio e o cotidiano de seus habitantes.',
-            location: {
-                center: [-49.50697, -2.57502]                ,
-                zoom: 6.75,
-                pitch: 0,
-                bearing: 0,
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'mocajuba',
-            alignment: 'right',
-            hidden: false,
-            image: './img/foto_amazonia_harmonize/foto_2_mapa.jpg',
-            description: 'Em Mocajuba, moradores relatam dificuldades de abastecimento de água limpa e segura para consumo, apesar de estarem tão próximos ao rio.',
-            location: {
-                center: [-49.47754, -2.55003],
-                zoom: 10.8,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'cameta',
-            alignment: 'right',
-            hidden: false,
-            image: './img/foto_amazonia_harmonize/foto_3_mapa.jpg',
-            description: 'Já em Cametá, o aumento das temperaturas e a irregularidade das chuvas afetam diretamente a produção agrícola da região.',
-            location: {
-                center: [-49.51021, -2.28107],
-                zoom: 10.8,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'saneamento',
-            alignment: 'fully',
-            hidden: false,
-            image: './img/foto_amazonia_harmonize/foto_4_mapa.jpg',
-            description: 'Além disso, questões de saneamento precário são evidentes: lixo acumulado, esgoto a céu aberto e a falta de acesso à água potável. Esses problemas criam um ambiente propício para a proliferação de doenças infecciosas, incluindo aquelas transmitidas por vetores, como a dengue e malária.',
-            location: {
-                center: [-49.56344, -2.44984],
-                zoom: 8.42,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'saneamento-2',
-            alignment: 'fully',
-            hidden: false,
-            title: '',
-            image: '',
-            description: 'A expansão de áreas agrícolas e o desmatamento para pastagens modificam ecossistemas e aproximam insetos transmissores de doenças de áreas habitadas.',
-            location: {
-                center: [-49.56344, -2.44984],
-                zoom: 8.42,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'mocajuba-2',
-            alignment: 'right',
-            hidden: false,
-            image: './assets/geneva.jpg',
-            description: 'A expansão de áreas agrícolas e o desmatamento para pastagens modificam ecossistemas e aproximam insetos transmissores de doenças de áreas habitadas.',
-            location: {
-                center: [-49.47754, -2.55003],
-                zoom: 10.8,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'cameta-2',
-            alignment: 'right',
-            hidden: false,
-            image: './assets/buenos-aires.jpg',
-            description: 'Também foram identificados casos da Doença de Chagas oral em Cametá.',
-            location: {
-                center: [-49.51021, -2.28107],
-                zoom: 10.8,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        }
-    ]
+  {
+    id: 'panorama-semiarido',
+    alignment: 'left',
+    hidden: false,
+    image: './img/foto_semiarido_harmonize/foto_1_mapa.jpg',
+    caption: 'Vista urbana de Mãe d’Água, circundada pela Serra do Teixeira',
+    description: 'A paisagem do sertão paraibano é marcada pela aridez, chuvas irregulares e contrastes entre áreas urbanas e rurais.',
+    location: {
+      center: [-38.0871078, -6.9275904], // Mãe d’Água, PB
+      zoom: 6.75,
+      pitch: 0,
+      bearing: 0
+    },
+    mapAnimation: 'flyTo',
+    rotateAnimation: false,
+    callback: '',
+    onChapterEnter: [],
+    onChapterExit: []
+  },
+  {
+    id: 'riscos-patos',
+    alignment: 'right',
+    hidden: false,
+    image: './img/foto_semiarido_harmonize/foto_2_mapa.jpg',
+    caption: 'Lixo acumulado nas ruas do bairro 7 casas, em Patos.',
+    description: 'Em bairros periféricos de Patos, esgoto a céu aberto, lixo e animais soltos criam condições para a proliferação de vetores.',
+    location: {
+      center: [-37.27705918159874, -7.028104647025206], // Patos, PB
+      zoom: 15,
+      pitch: 0.00,
+      bearing: 0.00
+    },
+    mapAnimation: 'flyTo',
+    rotateAnimation: false,
+    callback: '',
+    onChapterEnter: [],
+    onChapterExit: []
+  },
+  {
+    id: 'abastecimento-maedagua',
+    alignment: 'right',
+    hidden: false,
+    image: './img/foto_semiarido_harmonize/foto_3_mapa.jpg',
+    caption: 'Cisterna sem tampa usada para armazenar água de carro-pipa no Sítio Covão, localizado em região rural do município de Mãe d’água.',
+    description: 'Sem abastecimento da companhia estadual, Mãe d’Água depende de poços e carros-pipa, o que gera riscos de contaminação.',
+    location: {
+      center: [-37.427422283094515, -7.255175747086354], // Mãe d’Água, PB
+      zoom: 15,
+      pitch: 0,
+      bearing: 0
+    },
+    mapAnimation: 'flyTo',
+    rotateAnimation: false,
+    callback: '',
+    onChapterEnter: [],
+    onChapterExit: []
+  },
+  {
+    id: 'criadores-periurbanos',
+    alignment: 'fully',
+    hidden: false,
+    image: './img/foto_semiarido_harmonize/foto_4_mapa.jpg',
+    caption: 'Cruz da Menina, bairro residencial localizado na região periférica do município de Patos.',
+    description: 'Em bairros como Cruz da Menina e Jardim Magnólia, chiqueiros, galinheiros e o descarte de resíduos a céu aberto favorecem a presença de vetores como flebotomíneos e triatomíneos.',
+    location: {
+      center: [-37.27705918159874, -7.028104647025206], // Patos, PB
+      zoom: 15,
+      pitch: 0,
+      bearing: 0
+    },
+    mapAnimation: 'flyTo',
+    rotateAnimation: false,
+    callback: '',
+    onChapterEnter: [],
+    onChapterExit: []
+  },
+  {
+    id: 'zona-rural-trincheiras',
+    alignment: 'right',
+    hidden: false,
+    image: './img/foto_semiarido_harmonize/foto_5_mapa.jpg',
+    caption: 'Área rural de Trincheiras com acúmulo de lixo e recipientes com larvas de mosquito.',
+    description: 'Em Trincheiras, zona rural de Patos, foram identificados pontos com queima de lixo, recipientes com larvas de mosquito e presença de triatomíneos próximos às casas.',
+    location: {
+      center: [-37.27705918159874, -7.028104647025206], // Patos, PB
+      zoom: 15,
+      pitch: 0.00,
+      bearing: 0.00
+    },
+    mapAnimation: 'flyTo',
+    rotateAnimation: false,
+    callback: '',
+    onChapterEnter: [],
+    onChapterExit: []
+  }
+  // fim dos capítulos
+  ]
 };

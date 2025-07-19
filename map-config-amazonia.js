@@ -75,8 +75,26 @@
                 }
     
                 if (record.image) {
+
                     var image = new Image();
                     image.src = record.image;
+                    image.className = 'imagem-corpo';
+                    image.onload = function() {
+                        if (image.naturalWidth > image.naturalHeight) {
+                            // Imagem horizontal: limitar largura
+                            image.style.width = '100%';
+                            image.style.maxWidth = '800px';
+                            image.style.height = 'auto';
+                        } else {
+                            // Imagem vertical: limitar altura
+                            image.style.width = 'auto';
+                            image.style.height = '500px';
+                            image.style.maxHeight = '80vh';
+                            image.style.maxWidth = '100%';
+                            image.style.display = 'block';
+                            image.style.margin = '0 auto';
+                        }
+                    };
                     chapter.appendChild(image);
 
                     if (record.caption) {

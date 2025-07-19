@@ -75,9 +75,34 @@
                 }
     
                 if (record.image) {
+
                     var image = new Image();
                     image.src = record.image;
+                    image.className = 'imagem-corpo';
+                    image.onload = function() {
+                        if (image.naturalWidth > image.naturalHeight) {
+                            // Imagem horizontal: limitar largura
+                            image.style.width = '100%';
+                            image.style.maxWidth = '800px';
+                            image.style.height = 'auto';
+                        } else {
+                            // Imagem vertical: limitar altura
+                            image.style.width = 'auto';
+                            image.style.height = '500px';
+                            image.style.maxHeight = '80vh';
+                            image.style.maxWidth = '100%';
+                            image.style.display = 'block';
+                            image.style.margin = '0 auto';
+                        }
+                    };
                     chapter.appendChild(image);
+
+                    if (record.caption) {
+                        var caption = document.createElement('p');
+                        caption.className = 'image-map-caption';
+                        caption.innerText = record.caption;
+                        chapter.appendChild(caption);
+                    }
                 }
     
                 if (record.description) {
@@ -349,132 +374,88 @@
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-49.5056, -2.2444]
+                                    coordinates: [-37.276715858846224, -7.026060183886886]
                                 },
                                 properties: {
-                                    name: 'Cametá',
-                                    state: 'Pará'
+                                    name: 'Patos',
+                                    state: 'Paraíba'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-49.5025507, -2.5795646]
+                                    coordinates: [-37.4276797751589, -7.255516320906796]
                                 },
                                 properties: {
-                                    name: 'Mocajuba',
-                                    state: 'Pará'
+                                    name: 'Mãe d’Água',
+                                    state: 'Paraíba'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-48.612019, -1.3413464]
+                                    coordinates: [-35.02274285966568, -5.810257572197747]
                                 },
                                 properties: {
-                                    name: 'Belém',
-                                    state: 'Pará'
+                                    name: 'Natal',
+                                    state: 'Rio Grande do Norte'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-51.2601441, 0.1015795]
+                                    coordinates: [-34.662690938090854, -7.101687154201339]
                                 },
                                 properties: {
-                                    name: 'Macapá',
-                                    state: 'Amapá'
+                                    name: 'João Pessoa',
+                                    state: 'Paraíba'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-48.4282678, -1.3598227]
+                                    coordinates: [-34.694804213271844, -8.049311122555252]
                                 },
                                 properties: {
-                                    name: 'Ananindeua',
-                                    state: 'Pará'
+                                    name: 'Recife',
+                                    state: 'Pernambuco'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-49.1422943, -5.3375369]
+                                    coordinates: [-35.60237173294549, -7.1495768526144525]
                                 },
                                 properties: {
-                                    name: 'Marabá',
-                                    state: 'Pará'
+                                    name: 'Campina Grande',
+                                    state: 'Paraíba'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-47.4895861, -0.7083102]
+                                    coordinates: [-37.122200669912424, -5.185866861828564]
                                 },
                                 properties: {
-                                    name: 'Barcarena',
-                                    state: 'Pará'
+                                    name: 'Mossoró',
+                                    state: 'Rio Grande do Norte'
                                 }
                             },
                             {
                                 type: 'Feature',
                                 geometry: {
                                     type: 'Point',
-                                    coordinates: [-48.7999786, -1.1963762]
+                                    coordinates: [-35.656432854341304, -8.097526506981657]
                                 },
                                 properties: {
-                                    name: 'Castanhal',
-                                    state: 'Pará'
-                                }
-                            },
-                            {
-                                type: 'Feature',
-                                geometry: {
-                                    type: 'Point',
-                                    coordinates: [-50.9326482, -1.7437195]
-                                },
-                                properties: {
-                                    name: 'Breves',
-                                    state: 'Pará'
-                                }
-                            },
-                            {
-                                type: 'Feature',
-                                geometry: {
-                                    type: 'Point',
-                                    coordinates: [-50.1489642, -1.1954854]
-                                },
-                                properties: {
-                                    name: 'Soure',
-                                    state: 'Pará'
-                                }
-                            },
-                            {
-                                type: 'Feature',
-                                geometry: {
-                                    type: 'Point',
-                                    coordinates: [-47.7403933, -2.4204827]
-                                },
-                                properties: {
-                                    name: 'Tucuruí',
-                                    state: 'Pará'
-                                }
-                            },
-                            {
-                                type: 'Feature',
-                                geometry: {
-                                    type: 'Point',
-                                    coordinates: [-51.1820912, -3.7849726]
-                                },
-                                properties: {
-                                    name: 'Parauapebas',
-                                    state: 'Pará'
+                                    name: 'Caruaru',
+                                    state: 'Pernambuco'
                                 }
                             }
                         ]
