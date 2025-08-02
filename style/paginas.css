@@ -118,7 +118,6 @@ a:visited {
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 1534px;
   margin: 0 auto;
   background-color: rgb(255, 250, 242);
   display: flex;
@@ -135,22 +134,22 @@ a:visited {
   transform: translateY(0);
 }
 
-/* Use esta versão do .navbar-content */
 .navbar-content {
+  /* Layout do conteúdo */
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* Dimensões */
   width: 100%;
-  max-width: 1400px; /* Podemos até usar um max-width maior aqui */
-  
-  /*
-    A MÁGICA FLUIDA:
-    - O padding nunca será menor que 24px.
-    - Ele tentará ser 5% da largura da tela (5vw).
-    - Ele nunca será maior que 150px.
-  */
-  padding-left: clamp(24px, 5vw, 150px);
-  padding-right: clamp(24px, 5vw, 150px);
+  /* IMPORTANTE: Ajuste este valor para ser igual à largura máxima do seu site */
+}
+
+/* --- Classe para esconder a Navbar ao rolar para baixo --- */
+.navbar.hide {
+  transform: translateY(-100%); /* Move a navbar para cima, para fora da tela */
+  opacity: 0;
+  pointer-events: none; /* Impede cliques na barra quando escondida */
 }
 
 .logo a {
