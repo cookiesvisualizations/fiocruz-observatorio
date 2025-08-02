@@ -1,3 +1,23 @@
+
+/* Remove a mudança de cor do link inteiro para não afetar o parágrafo */
+.story-link-container a.text-elements:hover {
+    cursor: pointer;
+    /* REMOVA a propriedade 'color' e 'text-decoration' daqui */
+}
+
+/* Aplica a cor e o sublinhado SOMENTE no h1 quando o mouse passar sobre o link */
+.story-link-container a.text-elements:hover h1 {
+    color: #007c4b !important;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+/* Garante que o parágrafo NÃO seja sublinhado ao passar o mouse */
+.story-link-container a.text-elements:hover p {
+    text-decoration: none;
+}
+
+
 .divider-green {
   border: none;
   border-top: 2px solid #007c4b;
@@ -37,16 +57,14 @@
     font-size: 18px;
     line-height: 1.5;
     font-family: 'Lora', serif;
-    text-align: left;
     margin-bottom: 20px;
     margin-top: 30px;
+    text-align: justify;
     font-weight: normal;
     box-sizing: border-box;
     width: 100%;
     display: block;
     background: transparent;
-    padding-left: 15% !important;
-    padding-right: 15% !important;
     box-sizing: border-box;
 }
 @media (max-width: 768px) {
@@ -582,4 +600,95 @@ strong {
     }
   }
 
- 
+ /* Contêiner que alinha a grade de ferramentas com o parágrafo de introdução */
+.ferramentas-grid {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 30px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Cada linha da ferramenta (imagem + texto) */
+.ferramenta-item {
+    display: flex;
+    /* MUDANÇA: Centraliza o texto verticalmente com a imagem no desktop */
+    align-items: center; 
+    gap: 24px;
+    width: 100%;
+}
+
+/* Bloco da imagem */
+.ferramenta-imagem {
+    flex: 0 0 140px;
+}
+
+.ferramenta-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Bloco do texto */
+.ferramenta-texto {
+    flex: 1;
+}
+
+/* Remove margens e paddings desnecessários do parágrafo dentro do item */
+.ferramenta-item p.text {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left;
+}
+
+/* Estilo para o link do título da ferramenta */
+.ferramenta-item a.titulo-ferramenta {
+    color: #007c4b !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ferramenta-item a.titulo-ferramenta:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para o novo layout de ferramentas */
+@media (max-width: 768px) {
+    /* Ajusta o padding do contêiner geral em telas menores */
+    .ferramentas-grid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Empilha os itens e alinha à esquerda */
+    .ferramenta-item {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 0px; /* Remove o gap horizontal */
+        /* MUDANÇA: Alinha os itens à esquerda no mobile */
+    }
+
+    /* MUDANÇA: Transforma a imagem em um ícone pequeno */
+    .ferramenta-imagem img {
+        margin-bottom: 12px; /* Adiciona espaço entre o ícone e o texto */
+        width: 30%;
+        border-radius: 8px;
+        display: block;
+    }
+
+    /* Bloco da imagem */
+    .ferramenta-imagem {
+        flex: 0 0 auto;
+}
+
+    .ferramenta-texto {
+        width: 100%;
+    }
+
+    /* MUDANÇA: Garante que o texto fique alinhado à esquerda */
+    .ferramenta-item p.text {
+        text-align: left;
+    }
+}
