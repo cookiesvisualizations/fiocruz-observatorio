@@ -34,16 +34,14 @@
 }
 .block-container.ferramentas {
     background-color: var(--color-divider);
-    width: 100vw;
-    margin-left: calc(-1 * ((100vw - 100%) / 2));
 /* Link de ferramenta destacado */
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
     box-sizing: border-box;
 }
 /* ========================= SEÇÃO FERRAMENTAS (FUNDO LARANJA) ========================= */
 .block-container.ferramentas h1.text {
-    color: #000000 !important;
+    color: var(--color-black);
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -53,24 +51,20 @@
     font-family: 'Lora', serif;
 }
 .block-container.ferramentas p.text {
-    color: #222 !important;
-    font-size: 18px;
+    color: var(--color-black);;
     line-height: 1.5;
     font-family: 'Lora', serif;
     margin-bottom: 20px;
     margin-top: 30px;
     text-align: justify;
     font-weight: normal;
-    box-sizing: border-box;
+
     width: 100%;
     display: block;
-    background: transparent;
     box-sizing: border-box;
 }
 @media (max-width: 768px) {
     .block-container.ferramentas p.text {
-        padding-left: 5% !important;
-        padding-right: 5% !important;
         font-size: 16px;
     }
 }
