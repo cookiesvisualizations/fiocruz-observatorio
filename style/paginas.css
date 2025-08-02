@@ -117,28 +117,41 @@ a:visited {
 .navbar {
   position: fixed;
   top: 0;
-  left: 0; /* Garante o alinhamento à esquerda */
   width: 100%;
+  max-width: 1534px;
+  margin: 0 auto;
   background-color: rgb(255, 250, 242);
   display: flex;
-  justify-content: center; /* ESSA linha centraliza o .navbar-content */
+  justify-content: space-between;
   align-items: center;
   padding: 0 32px;
   height: 100px;
+  font-size: 16px;
+  line-height: 18.4px;
   box-sizing: border-box;
   z-index: 7;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Use esta versão do .navbar-content */
 .navbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* Este max-width limita apenas o conteúdo, não a barra de fundo. */
-  max-width: 1200px; 
+  max-width: 1400px; /* Podemos até usar um max-width maior aqui */
+  
+  /*
+    A MÁGICA FLUIDA:
+    - O padding nunca será menor que 24px.
+    - Ele tentará ser 5% da largura da tela (5vw).
+    - Ele nunca será maior que 150px.
+  */
+  padding-left: clamp(24px, 5vw, 150px);
+  padding-right: clamp(24px, 5vw, 150px);
 }
-
 
 .logo a {
   display: flex;
