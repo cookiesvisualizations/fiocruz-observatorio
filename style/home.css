@@ -1,22 +1,4 @@
 
-/* Remove a mudança de cor do link inteiro para não afetar o parágrafo */
-.story-link-container a.text-elements:hover {
-    cursor: pointer;
-    /* REMOVA a propriedade 'color' e 'text-decoration' daqui */
-}
-
-/* Aplica a cor e o sublinhado SOMENTE no h1 quando o mouse passar sobre o link */
-.story-link-container a.text-elements:hover h1 {
-    color: #007c4b !important;
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-
-/* Garante que o parágrafo NÃO seja sublinhado ao passar o mouse */
-.story-link-container a.text-elements:hover p {
-    text-decoration: none;
-}
-
 
 .divider-green {
   border: none;
@@ -308,6 +290,13 @@ img.logo.small {
     padding-right: 0px;
 }
 
+.title-link:hover .amazonia-title,
+.title-link:hover .semiarido-title {
+    color: #007c4b;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
 .story-link-container text {
     font-size: 18px;
     line-height: 1.5;
@@ -376,6 +365,7 @@ img.logo.small {
 
     .story-link-container .text-elements {
         width: 100%;
+
     }
 
     .story-link-container .logo-holder {
