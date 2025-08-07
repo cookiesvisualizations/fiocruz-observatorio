@@ -16,7 +16,8 @@
 }
 .block-container.ferramentas {
     background-color: var(--color-divider);
-/* Link de ferramenta destacado */
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
     padding-left: 5% !important;
     padding-right: 5% !important;
     box-sizing: border-box;
@@ -238,7 +239,7 @@ img.logo.small {
     margin-top: -30px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 /* ========================= SEÇÃO ÁREAS DE ESTUDO ========================= */
     .lead-holder p {
         font-size: 20px;
@@ -249,13 +250,13 @@ img.logo.small {
     width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .main-content {
         width: 100%;
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
     .story-link-outer {
         margin: 0 auto;
         width: 100%;
@@ -340,7 +341,7 @@ img.logo.small {
     width: 80%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .story-link-container {
         display: flex;
         flex-direction: column-reverse;
@@ -381,8 +382,11 @@ img.logo.small {
     }
 
     .logo-holder img.ilustra {
-        width: 400px;
-    }
+        width: 100vw;           /* Ocupa 100% da largura da viewport */
+        max-width: 100vw;       /* Não passa da largura da tela */
+        height: auto;           /* Mantém a proporção da imagem */
+        display: block;         /* Tira espaços indesejados abaixo da imagem */
+}
 }
 
 .block-container {
